@@ -10,10 +10,10 @@ in nameservers list.
 The default resolver can be overwritten with my_resolver.nameservers parameter.
 
 Configuration parameters:
-    domain: domain name to check
-    lifetime: resolver lifetime
-    nameservers: comma separated list of reference DNS nameservers
-    resolvers: comma separated list of DNS resolvers to use
+    domain: domain name to check (default '')
+    lifetime: resolver lifetime (default 0.3)
+    nameservers: comma separated list of reference DNS nameservers (default '')
+    resolvers: comma separated list of DNS resolvers to use (default '')
 
 Color options:
     color_bad: One or more lookups have failed

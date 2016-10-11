@@ -6,12 +6,13 @@ It features thresholds to colorize the output and forces a low timeout to
 limit the impact of a server connectivity problem on your i3bar freshness.
 
 Configuration parameters:
-    critical: set bad color above this threshold
-    db: database to use
-    host: database host to connect to
-    password: login password
-    user: login user
-    warning: set degraded color above this threshold
+    critical: set bad color above this threshold (default 20)
+    db: database to use (default '')
+    host: database host to connect to (default '')
+    password: login password (default '')
+    timeout: timeout for database connection (default 5)
+    user: login user (default '')
+    warning: set degraded color above this threshold (default 15)
 
 Color options:
     color_bad: Open ticket above critical threshold
