@@ -264,7 +264,7 @@ class Py3:
 
         return requested + offset
 
-    def safe_format(self, format_string, param_dict=None):
+    def safe_format(self, format_string, param_dict=None, attr_getter=None):
         """
         Parser for advanced formating.
 
@@ -293,17 +293,22 @@ class Py3:
         param_dict is a dictionary of palceholders that will be substituted.
         If a placeholder is not in the dictionary then if the py3status module
         has an attribute with the same name then it will be used.
+
+        attr_getter is a function that will when called with a an attribute name
+        as a parameter will return a value.
         """
         try:
             return self._formatter.format(
                 format_string,
                 self._py3status_module,
-                param_dict
+                param_dict,
+                attr_getter,
             )
         except Exception:
             return 'invalid format'
 
-    def build_composite(self, format_string, param_dict=None, composites=None):
+    def build_composite(self, format_string, param_dict=None, composites=None,
+                        attr_getter=None):
         """
         Build a composite output using a format string.
 
@@ -317,6 +322,7 @@ class Py3:
                 format_string,
                 self._py3status_module,
                 param_dict,
+                attr_getter,
                 composites,
             )
         except Exception:

@@ -892,6 +892,9 @@ param_dict is a dictionary of palceholders that will be substituted.
 If a placeholder is not in the dictionary then if the py3status module
 has an attribute with the same name then it will be used.
 
+attr_getter is a function that will when called with a an attribute name
+as a parameter will return a value.
+
 __build_composite(format_string, param_dict=None, composites=None)__
 
 Build a composite output using a format string.
